@@ -22,9 +22,23 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'gosukiwi/vim-atom-dark'
 
+" Status/tabline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 " Theme
 colorscheme atom-dark-256
 
+" Tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:one_allow_italics = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
+" Status line
+let g:airline_theme = "onedark"
