@@ -26,6 +26,12 @@ Plug 'gosukiwi/vim-atom-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" File System Explorer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdcommenter'
+
 call plug#end()
 
 " Theme
@@ -42,3 +48,19 @@ let g:airline_symbols.space = "\ua0"
 
 " Status line
 let g:airline_theme = "onedark"
+
+" NERDTree key bindings
+" Open NERDTree at vim start
+autocmd VimEnter * NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+" ctrl + n => open NERDTree
+nnoremap <C-n> :NERDTree<CR>
+" ctrl + t => Toggle NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+" ctrl + f => Find file in folder
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" NERDTree settings
+" close NERDTree whe file is open
+let NERDTreeQuitOnOpen=1
+
