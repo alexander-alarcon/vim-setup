@@ -46,6 +46,24 @@ Plug 'jiangmiao/auto-pairs'
 " Emmet
 Plug 'mattn/emmet-vim'
 
+" JS/TS Highlight
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Conquer of Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" COC Plugins
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+
+" Snippets
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+
 call plug#end()
 
 " Theme
@@ -79,7 +97,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen=1
 
 " Highlight lines Git
-let g:gitgutter_highlight_lines = 1
+" let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_linenrs = 1
 
 " Highlight Signs
@@ -89,3 +107,19 @@ highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
+
+" COC config
+" Coc Extensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-json', 
+  \ ]
+
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
