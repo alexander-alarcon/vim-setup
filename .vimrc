@@ -17,4 +17,14 @@ set noswapfile
 syntax on
 filetype plugin on
 
-set spell
+" Install plugin
+call plug#begin('~/.vim/plugged')
+" Themes
+Plug 'gosukiwi/vim-atom-dark'
+
+call plug#end()
+
+" Theme
+colorscheme atom-dark-256
+
+
