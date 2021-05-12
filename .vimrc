@@ -36,6 +36,16 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+" Editor Utils
+" Multicursor
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" Auto Pair
+Plug 'jiangmiao/auto-pairs'
+
+" Emmet
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 " Theme
