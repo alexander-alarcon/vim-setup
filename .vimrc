@@ -51,6 +51,9 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats.vim'
 
+" Prisma Highlight
+Plug 'pantharshit00/vim-prisma'
+
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -60,6 +63,7 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'pantharshit00/coc-prisma', {'do': 'yarn install --frozen-lockfile'}
 
 " Snippets
 Plug 'honza/vim-snippets'
@@ -123,7 +127,9 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
-  \ 'coc-json', 
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-prisma'
   \ ]
 
 " TextEdit might fail if hidden is not set.
