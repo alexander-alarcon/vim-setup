@@ -20,7 +20,7 @@ filetype plugin on
 " Install plugin
 call plug#begin('~/.vim/plugged')
 " Themes
-Plug 'gosukiwi/vim-atom-dark'
+Plug 'sainnhe/edge'
 
 " Status/tabline
 Plug 'vim-airline/vim-airline'
@@ -67,7 +67,14 @@ Plug 'SirVer/ultisnips'
 call plug#end()
 
 " Theme
-colorscheme atom-dark-256
+" Edge theme
+if has('termguicolors')
+  set termguicolors
+endif
+let g:edge_style = 'default'
+let g:edge_enable_italic = 1
+let g:edge_disable_italic_comment = 1
+colorscheme edge
 
 " Tabline
 let g:airline#extensions#tabline#enabled = 1
@@ -101,12 +108,12 @@ let NERDTreeQuitOnOpen=1
 let g:gitgutter_highlight_linenrs = 1
 
 " Highlight Signs
-let g:gitgutter_override_sign_column_highlight = 0
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-highlight GitGutterChangeDelete ctermfg=4
+" let g:gitgutter_override_sign_column_highlight = 1
+" highlight clear SignColumn
+" highlight GitGutterAdd ctermfg=2
+" highlight GitGutterChange ctermfg=3
+" highlight GitGutterDelete ctermfg=1
+" highlight GitGutterChangeDelete ctermfg=4
 
 " COC config
 " Coc Extensions
