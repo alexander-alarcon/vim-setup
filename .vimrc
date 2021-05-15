@@ -102,6 +102,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " NERDTree settings
 " close NERDTree whe file is open
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 " Highlight lines Git
 " let g:gitgutter_highlight_lines = 1
