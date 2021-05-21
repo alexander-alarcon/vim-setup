@@ -100,7 +100,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 " ctrl + n => open NERDTree
 nnoremap <C-n> :NERDTree<CR>
 " ctrl + t => Toggle NERDTree
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-m> :NERDTreeToggle<CR>
 " ctrl + f => Find file in folder
 nnoremap <C-f> :NERDTreeFind<CR>
 
